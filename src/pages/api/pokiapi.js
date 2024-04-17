@@ -5,12 +5,14 @@ import CategoryData from '../components/categoryData';
 
 // Styled Categories li
 const Category = styled.li `
-    font-size: 1rem;
-    padding: 10px 15px;
-    background-color:#ddd;
-    width:fit-content;
-    border-radius:20px;
-    font-weight: bold;
+font-size: 1rem;
+padding: 10px 15px;
+background-color: #0885ff;
+color: white;
+font-weight: bold;
+width: 100%;
+font-family: cursive;
+letter-spacing: 1px;
     `;
 
 // Create Categories Component
