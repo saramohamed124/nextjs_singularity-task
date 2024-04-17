@@ -1,4 +1,14 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
+
+// Style Type p
+const Type = styled.p `
+background-color: #ddd;
+width: fit-content;
+padding: 10px;
+border-radius: 21px;
+font-family: monospace;
+`
 
 function CategoryData(props) {
     // Create constant and make initial value and useState Hook
@@ -37,11 +47,14 @@ function CategoryData(props) {
                 <li>{data.next}</li>
                 <li>{data.count}</li>
                 {/* Map directly over e.results */}
+                <div  style={{display:"flex",gap:20,flexWrap:"wrap"}}>
                 {data.results.map((item, index) => (
-                    // Make sure to return from map function and provide unique key
-                    <div key={index}>{item.name}{item.url}</div>
-
-))}
+                    //provide unique key
+                        <Type key={index}>
+                        {item.name}
+                        </Type>
+                    ))}
+                        </div>
             </div>
         </>
     );
